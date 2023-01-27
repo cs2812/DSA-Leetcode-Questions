@@ -13,3 +13,8 @@ var isSubsequence = function(s, t) {
    }
    return true 
 };
+
+let s1 = "abc", t1 = "ahbgdc"
+let s2 = "axc", t2 = "ahbgdc"
+console.log(isSubsequence(s1,t1))
+console.log(isSubsequence(s2,t2))
