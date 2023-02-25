@@ -19,6 +19,27 @@ var intersection = function (nums1, nums2) {
   }
 };
 
+/* 2nd Method
+
+var intersection = function(nums1, nums2) {
+    let length = Math.min(nums1.length, nums2.length)
+    let obj1 = {}
+    let obj2 = {}
+    let arr=[]
+    for(let i of nums1){
+        obj1[i]=(obj1[i]||0)+1
+    }
+    for(let i of nums2){
+        obj2[i]=(obj2[i]||0)+1
+    }
+    for(let i in obj1){
+        if(obj2[i]){
+            arr.push(i)
+        }
+    }
+    return arr
+};
+*/
 
 
 let nums1 = [1,2,2,1], nums2 = [2,2]
