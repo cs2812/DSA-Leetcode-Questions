@@ -24,9 +24,10 @@ var generate = function(numRows) {
     let num2 = 1
     
     console.log(generate(num1))// Output: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
-    console.log(generate(num2))//[[i]]
+    console.log(generate(num2))//[[1]]
 
     console.log("//2nd Method")
+    
     var generate2 = function(numRows) {
       let res=[] 
       for(let i=0;i<numRows;i++){

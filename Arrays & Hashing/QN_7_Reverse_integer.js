@@ -6,6 +6,7 @@ var reverse = function(x) {
     let ans = 0
     while(x>0){
         let digit = x%10
+        // console.log("h",digit)
         ans = (ans*10)+digit
         x = Math.floor(x/10) 
     }
@@ -21,3 +22,5 @@ var reverse = function(x) {
     }
     return ans;
 }
+let res =reverse(232)
+console.log(res)

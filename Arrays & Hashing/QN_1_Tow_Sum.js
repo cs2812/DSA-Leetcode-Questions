@@ -8,7 +8,6 @@ var twoSum1 = function(nums, target) {
     }
 };
 
-
 //For Sorted Array
 var twoSum2 = function(nums, target) {
     nums=nums.sort((a,b)=>a-b)

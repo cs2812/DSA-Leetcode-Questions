@@ -1,3 +1,6 @@
+// bull = same element at same index in both array
+// cow  = same element at different index in both array
+
 function getHint(secret, guess) {
 let secretArr =secret.split("") 
 let guessArr =guess.split("") 
