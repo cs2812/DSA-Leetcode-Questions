@@ -1,8 +1,14 @@
 // //1.
 // var lengthOfLastWord = function(s) {
-//   let trimmedString = s.trim();
-//   return trimmedString.length - trimmedString.lastIndexOf(' ') - 1;
-// /*trimmedString.lastIndexOf(' ') because there is space in between trimmedString. with the help of space index we are getting are result. and -1 just because index start from 0 */ 
+// let trimmedString = s.trim();
+// return trimmedString.length - trimmedString.lastIndexOf(' ') - 1;
+
+/*trimmedString.lastIndexOf(' ') because 
+there is space in between trimmedString. 
+with the help of space index we are getting our result. 
+and -1 just because index start from 0 
+*/ 
+
 // };
 
 //2.

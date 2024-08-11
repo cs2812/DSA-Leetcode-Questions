@@ -1,7 +1,9 @@
 /* Given an input array of N characters consisting only of lowercase alphabets. 
-The task is to find the first non-repeating character, each time a character is inserted into the array. 
-If no non-repeating element is fou nd print -1. 
-For example, if the input is [a, a, b, c] then the output is [a, -1, b, b]. write a code in javascript.*/
+-The task is to find the first non-repeating character, 
+each time a character is inserted into the array. 
+-If no non-repeating element is fou nd print -1. 
+-For example, if the input is [a, a, b, c] then the output is [a, -1, b, b]. 
+write a code in javascript.*/
 
 function firstNonRepeatingChar(input) {
   const charCount = {};
