@@ -1,18 +1,18 @@
-var stringMatching = function(words) {
-    let res=[]
-    for(let i=0;i<words.length;i++){
-      for(let j=0;j<words.length;j++){
-        let present = words[j].includes(words[i])
-        if(i!==j && present){
-            res.push(words[i])
-            break;
+const stringMatching = (arr) => {
+    let ans = [];
+    arr.sort((a, b) => a.length - b.length); // Sort by length to check smaller strings first
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[j].includes(arr[i])) {
+                ans.push(arr[i]);
+                break; // Move to the next string as soon as a match is found
+            }
         }
-      }
     }
-    return res;
+    return ans;
 };
-let words = ["mass","as","hero","superhero"]
-// words = ["leetcode","et","code"]
-// words = ["blue","green","bu"]
+
+let words = ["mass","as","hero","superhero"]   // Output = [ 'as', 'hero' ] 
+// words = ["leetcode","et","code"] //Output = [ 'et', 'code' ]
+// words = ["blue","green","bu"]    // Output= []
 console.log(stringMatching(words))
-// Output: ["as","hero"]

@@ -1,6 +1,5 @@
 var reverseVowels = function (s) {
   let str = s.split("");
-  
   let stk = [];
   let vowel = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
 

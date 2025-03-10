@@ -10,6 +10,7 @@ var reverse = function (x) {
   let ans = 0;
   while (x > 0) {
     let digit = x % 10;
+    console.log('digit:', digit)
     // ans = ans + digit;
     ans = ans * 10 + digit;
     x = Math.floor(x / 10);

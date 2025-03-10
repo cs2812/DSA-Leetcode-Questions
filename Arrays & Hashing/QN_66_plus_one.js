@@ -6,6 +6,7 @@ var plusOne = function (digits) {
     } else {
       digits[i] += 1;
       return digits;
+      // break;
     }
   }
   if (digits[0] === 0) {

@@ -20,8 +20,8 @@ var isAnagram = function (s, t) {
 
 console.log("2nd Method");
 const isAnagram2 = (s, t) => {
-  s = s.split("").sort().join("");
-  t = t.split("").sort().join("");
+  s = s.trim().split("").sort().join("");
+  t = t.trim().split("").sort().join("");
   return s === t;
 };
 
