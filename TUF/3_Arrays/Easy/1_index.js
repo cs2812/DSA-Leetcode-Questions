@@ -48,3 +48,31 @@ while(i<n){
 console.log(arr)
 */
 
+
+
+//4. Find missing number in an array
+/*
+let arr = [1,2,3,5]; let n=arr.length 
+let t =((n+1)*(n+2))/2
+for(let i=0;i<n;i++){
+    t-=arr[i]
+}
+console.log(t)
+*/
+
+
+//5. Maximum Consecutive Ones
+/*
+let c=0,m=0
+for(let ele of [1,1,0,0,1,1,1,0,1,1]){
+if(ele===1){
+    c++
+    if(m<c){m=c}
+}else{c=0}
+}
+console.log(m)
+*/
+
+
+
+
