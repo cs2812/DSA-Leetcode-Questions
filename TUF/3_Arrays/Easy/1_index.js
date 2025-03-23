@@ -14,7 +14,6 @@ const removeDuplicate = (arr) => {
 console.log(removeDuplicate([1, 1, 2, 2, 3, 4, 4, 5, 5, 6, 7, 7]));
 */
 
-
 //2. Left rotate an array by n places
 /*
 const rotateArr=(arr,l,r)=>{
@@ -30,7 +29,6 @@ rotateArr(arr,n,arr.length-1)
 rotateArr(arr,0,arr.length-1)
 console.log(arr)
 */
-
 
 //3. Move Zeros to end
 /*\
@@ -48,8 +46,6 @@ while(i<n){
 console.log(arr)
 */
 
-
-
 //4. Find missing number in an array
 /*
 let arr = [1,2,3,5]; let n=arr.length 
@@ -59,7 +55,6 @@ for(let i=0;i<n;i++){
 }
 console.log(t)
 */
-
 
 //5. Maximum Consecutive Ones
 /*
@@ -73,6 +68,26 @@ if(ele===1){
 console.log(m)
 */
 
+//Longest Subarray with given Sum K(Positives)
+/*
+function find(arr,k){
+  let max=-Infinity
+  let l = arr.length
+  for(let i=0;i<l;i++){
+      let s=0
+      for(let j=i;j<l;j++){
+        s+=arr[j]
+        if(s===k){
+            max = Math.max(max, j-i+1)
+        }
+      }
+  }
+  return max
+}
 
+// let arr=[1,2,0,1,2,1,0,3,2,1,3,0,2]
+let arr=[1,2,0,1,2,1]
+console.log(find(arr,5))
+*/
 
-
+// Longest Subarray with sum K | [Positives and Negatives]
