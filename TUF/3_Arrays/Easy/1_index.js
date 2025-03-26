@@ -117,21 +117,22 @@ console.log(find(arr, 8));
 
 // Longest Subarray with sum K | [Positives and Negatives]
 /*
-
 const find = (arr, k) => {
   let max = -Infinity;
-  const logs = {};
+  const preSum = {};
   let s = 0;
   for (let i = 0; i < arr.length; i++) {
     s += arr[i];
-    logs[s] = i;
+    
     if (s === k) {
       max = i + 1;
     } else {
-      if (logs[s - k] !== undefined) {
-        max = Math.max(max, i - logs[s - k]);
+      if (preSum[s - k] !== undefined) {
+        max = Math.max(max, i - preSum[s - k]);
       }
     }
+      // this condition will handle the case when the sum is repeated or (in Positives and Negatives array)
+      if(!preSum[s]){preSum[s]=i}
   }
   return max;
 };
