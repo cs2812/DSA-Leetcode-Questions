@@ -68,26 +68,75 @@ if(ele===1){
 console.log(m)
 */
 
-//Longest Subarray with given Sum K(Positives)
+//6. Maximum Subarray Sum (Brute Force)
 /*
-function find(arr,k){
-  let max=-Infinity
-  let l = arr.length
-  for(let i=0;i<l;i++){
-      let s=0
-      for(let j=i;j<l;j++){
-        s+=arr[j]
-        if(s===k){
-            max = Math.max(max, j-i+1)
-        }
-      }
+const arr = [1, 2, 3, -2, -1, 3, -4, 2, 3, 5, -1, 3];
+let max = -Infinity;
+for (let i = 0; i < arr.length; i++) {
+  let sum = 0;
+  for (let j = i; j < arr.length; j++) {
+    sum += arr[j];
+    max = Math.max(max, sum);
   }
-  return max
 }
-
-// let arr=[1,2,0,1,2,1,0,3,2,1,3,0,2]
-let arr=[1,2,0,1,2,1]
-console.log(find(arr,5))
+console.log(max);
 */
 
+//7. Maximum Subarray Sum (With Kadane's Algorithm)
+/*
+const arr =[1,2,3,-2,-1,3,-4,2,3,5,-1,3]
+let cs=0,ms=0
+for(let i=0;i<arr.length;i++){
+  cs+=arr[i]
+  ms = Math.max(ms,cs)
+  if(cs<0){cs=0}
+}
+console.log(ms)
+*/
+//6. Longest Subarray with Sum K (Positives [Brute force])
+/*
+function find(arr, k) {
+  let max = -Infinity;
+  let l = arr.length;
+  for (let i = 0; i < l; i++) {
+    let s = 0;
+    for (let j = i; j < l; j++) {
+      s += arr[j];
+      if (s === k) {
+        max = Math.max(max, j - i + 1);
+      }
+    }
+  }
+  return max;
+}
+
+let arr = [1, 2, 0, 1, 2, 1, 0, 3, 2, 1, 3, 0, 2];
+// let arr=[1,2,0,1,2,1]
+console.log(find(arr, 8));
+ */
+
 // Longest Subarray with sum K | [Positives and Negatives]
+/*
+
+const find = (arr, k) => {
+  let max = -Infinity;
+  const logs = {};
+  let s = 0;
+  for (let i = 0; i < arr.length; i++) {
+    s += arr[i];
+    logs[s] = i;
+    if (s === k) {
+      max = i + 1;
+    } else {
+      if (logs[s - k] !== undefined) {
+        max = Math.max(max, i - logs[s - k]);
+      }
+    }
+  }
+  return max;
+};
+
+let arr=[1,2,0,1,2,1,0,3,2,1,3,0,2]
+// let arr = [1, 2, 0, 1, 2, 1];
+console.log(find(arr, 8));
+*/
