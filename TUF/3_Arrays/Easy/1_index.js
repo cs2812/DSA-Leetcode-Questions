@@ -58,15 +58,23 @@ console.log(t)
 
 //5. Maximum Consecutive Ones
 /*
-let c=0,m=0
-for(let ele of [1,1,0,0,1,1,1,0,1,1]){
-if(ele===1){
-    c++
-    if(m<c){m=c}
-}else{c=0}
-}
-console.log(m)
-*/
+const find = (arr) => {
+  let c = 0,
+    m = 0;
+  for (let ele of arr) {
+    if (ele === 1) {
+      c++;
+      if (m < c) {
+        m = c;
+      }
+    } else {
+      c = 0;
+    }
+  }
+  return m;
+};
+console.log(find([1, 1, 0, 0, 1, 1, 1, 0, 1, 1]));
+ */
 
 //6. Maximum Subarray Sum (Brute Force)
 /*
@@ -93,6 +101,7 @@ for(let i=0;i<arr.length;i++){
 }
 console.log(ms)
 */
+
 //6. Longest Subarray with Sum K (Positives [Brute force])
 /*
 function find(arr, k) {
