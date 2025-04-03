@@ -67,3 +67,42 @@ const find = (arr) => {
 const arr = [2, 2, 1, 1, 1, 2, 2];
 console.log(find(arr));
 */
+
+
+// 3. Stock Buy And Sell
+/*
+=> Brute force
+const find=(arr)=>{
+let max =0
+let min = 0
+for(let i=0;i<arr.length;i++){
+    if(arr[min]>arr[i]){
+        min = i
+    }
+}
+if(min+1>=arr.length){
+    return 0
+}
+max=min+1
+for(let i=min+1;i<arr.length;i++){
+     if(arr[max]<arr[i]){
+         max = i
+     }
+}
+return arr[max]-arr[min]
+}
+
+=> optimize
+const find=(arr)=>{
+    let maxPro = 0;
+    let minPrice = Infinity;
+
+    for (let i = 0; i < arr.length; i++) {
+        minPrice = Math.min(minPrice, arr[i]);
+        maxPro = Math.max(maxPro, arr[i] - minPrice);
+    }
+    return maxPro;
+}
+console.log(find(arr))
+
+*/
